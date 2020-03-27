@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object.html</title>
+</head>
+<body>
+    <script>
+        var person= {
+            firstName:"scott",
+            lastName:"tiger",
+            age:35,
+            phone:"010-2655-24223"
+        }
+        var person2= {
+            firstName:"scott2",
+            lastName:"tiger2",
+            age:35,
+            phone:"010-2655-24323"
+        }
+        var person3= {
+            firstName:"scott3",
+            lastName:"tiger3",
+            age:35,
+            phone:"010-2655-24423"
+        }
+       var persons=[person, person2, person3]; 
+        console.log(person.firstName+", "+person.lastName);
+        console.log("very important!!!")
+        console.log(person["firstName"]+", "+person["lastName"])
+        for(i in persons) {
+            console.log(persons[i].firstName+", "+persons[i].lastName);
+        }
+    </script>
+    
+</body>
+</html>

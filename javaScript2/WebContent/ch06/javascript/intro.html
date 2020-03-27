@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <p id="show">HTML Contents</p>
+    <img id="btn" src="http://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+    <button onclick="changeDoc()">클릭</button>
+    <button onclick="changeDoc1()">클릭</button>
+    <button onclick="changeDoc2()">커져라얍</button>
+    <button onclick="changeDoc3()">클릭</button>
+    <script>
+        function changeDoc() {
+           // document.getElementById("show").innerHTML = "welcome JS";
+           document.getElementById("btn").src =
+           "http://www.w3schools.com/js/pic_bulbon.gif";
+        }
+        function changeDoc1() {
+           // document.getElementById("show").innerHTML = "welcome JS";
+           document.getElementById("btn").src =
+           "http://www.w3schools.com/js/pic_bulboff.gif";
+        }
+        function changeDoc2(){
+            document.getElementById("show").style.fontSize="50px";
+            document.getElementById("show").style.display="BLOCK";
+        }
+        function changeDoc3(){
+            document.getElementById("show").style.display="none";
+        }
+    </script>
+</body>
+</html>

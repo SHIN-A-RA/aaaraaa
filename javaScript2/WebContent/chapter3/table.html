@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		section{
+		position:relative;
+		left: 15%;
+		top: 50px;
+		width:60%;
+		background-color: cadetblue;
+		}
+
+	</style>
+</head>
+
+<body>
+	<section style="background-color: burlywood;width: 40%">
+	<table border=1 style="width:50%">
+		<caption>rowspan</caption>
+		<thead>
+			<tr>
+				<th align="center" rowspan="2">이름</th>
+				<th>나이</th>
+			</tr>
+			<tr>
+
+				<th>전화</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr align="center">
+				<td rowspan="2">하준원</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>1234</td>
+
+			</tr>
+			<tr align="center">
+				<td rowspan="2">윤재언</td>
+				<td>500</td>
+
+			</tr>
+			<tr>
+				<td>4657</td>
+
+			</tr>
+			<tr align="right">
+				<td rowspan="2">홍성우</td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<td>4657</td>
+
+			</tr>
+		</tbody>
+		<tfoot>
+				<tr>
+					<td colspan="2">colspan, rowspan 연습</td>
+
+				</tr>
+		</tfoot>
+	</table>
+
+	
+	
+	<br><br>
+	<!--줄띄우기(엔터)-->
+	<table border="1" style="width:300px">
+		<tr>
+			<td align="center" style="background-color: aqua;">이름 </td>
+			<td align="center" style="background-color: aqua;" colspan="2">연락처</td>
+		</tr>
+		<tr>
+			<td>신아라</td>
+			<td>01026552423</td>
+			<td>주소는</td>
+		</tr>
+	</table>
+	</section>
+	
+</body>
+
+</html>

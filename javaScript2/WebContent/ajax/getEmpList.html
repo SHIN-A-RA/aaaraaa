@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>ajax</h1>
+<table id="tbl">
+	<tr>
+      	 <td>empId</td>
+         <td>firstName</td>
+         <td>lastName</td>
+         <td>email</td>
+         <td>salary</td>
+      </tr>
+
+</table>
+	<script>
+		var xhtp = new XMLHttpRequest();
+		xhtp.onreadystatechange = function() {
+		//console.log("readyState: " + xhtp.readyState + ", status: "+xhtp.status)
+			if(xhtp.readyState == 4 && xhtp.status ==200){
+				var parsedData = JSON.parse(xhtp.responseText);
+				console.log(parsedData);
+				showPage(parsedData);
+//			var $tag="<ul>";
+				//$tag += "<li>" + parsedData[0].id + " - "
+				//+ parsedData[0].first_name + " - "
+			//	+ parsedData[0].last_name + "</li></ul>"
+				
+			//	document.getElementById("show").innerHTML = $tag;
+			}
+		}
+		xhtp.open("get","../GetEmpListServlet");
+		xhtp.send();
+		
+		function showPage(datas){
+		var $tr, $td, $text;
+		var $tabletag = document.getElementById("tbl");
+		$tabletag.setAttribute("border", 1);
+		
+		var titles = ["empId", "firstName", "lastName", "email", "salary"];
+		
+		datas.forEach(function(ob) {
+		$tr = document.createElement("tr");  //1번만 만들면 됌
+		for(obj of titles){
+			 $text = document.createTextNode(ob[obj]);
+             $td = document.createElement("td");
+             $td.appendChild($text); 
+             $tr.appendChild($td);//
+		
+             
+             
+		} $tabletag.appendChild($tr);
+		
+			});
+		}
+             </script>
+</body>
+</html>
