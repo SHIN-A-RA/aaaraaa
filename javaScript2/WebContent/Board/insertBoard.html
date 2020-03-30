@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 	<input type="text" name="" id="content"><br>
+    <input type="text" name="" id="writer"><br>
+    <button onclick ="insertBoardFunction()">Click</button>
+    <script>
+        function inserBoardFunction() {
+            var content  = document.getElementById('content').value;
+            var writer = document.getElementById('writer').value;
+            var xhtp = new XMLHttpRequest();
+            xhtp.sonreadystatechange = function(){
+                console.log(xhtp.responseText);
+            }
+            xhtp.open("post","../InsertBoardServlet",true);// true:비동기 false:동기 
+            xhtp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+            xhtp.send("content="+content+"&writer="+writer);
+            //field1=value1$field2=value2&field3=value3
+            
+
+
+        }
+    </script>
+</body>
+</html>
